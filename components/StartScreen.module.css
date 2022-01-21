@@ -1,0 +1,54 @@
+.startScreen {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  height: 400px;
+}
+
+.logoContainer {
+  width: 50px;
+  height: 45px;
+  background-color: #fff;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  position: relative;
+  transition-duration: 0.5s;
+}
+
+.logoContainer .ringOne,
+.logoContainer .ringTwo {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+}
+
+.logoContainer .ringOne {
+  width: 150px;
+  height: 150px;
+  transition-duration: 0.8s;
+  border-width: 30px;
+  display: block;
+  opacity: 0;
+}
+
+.logoContainer .ringTwo {
+  border-width: 3px;
+  /* transition-duration: 1.5s; */
+}
+
+.logoContainer .ringOne,
+.logoContainer .ringTwo {
+  box-shadow: inset 0 0 15px #fff, 0 0 15px #fff;
+}
+
+.logoContainer img {
+  width: 100%;
+  height: 100%;
+}

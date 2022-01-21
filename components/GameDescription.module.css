@@ -1,0 +1,52 @@
+.descriptContainer {
+  opacity: 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  animation-fill-mode: forwards;
+  animation-name: descriptEnter;
+  animation-delay: 0.2s;
+  animation-duration: 1.2s;
+  height: 300px;
+  position: absolute;
+  left: 125px;
+  bottom: 100px;
+}
+
+.descriptContainer p {
+  font-size: 25px;
+}
+
+.buttonContainer {
+  margin: 50px 0px 0px 0px;
+}
+
+.buttonContainer a {
+  padding: 15px;
+  background: rgba(143, 142, 142, 0.35);
+  border-radius: 35px;
+  margin: 0px 10px 0px 10px;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.descriptContainer .buttonContainer .playButton {
+  padding: 15px 75px 15px 75px;
+}
+
+.descriptContainer .buttonContainer .ellipsesButton {
+  border-radius: 50%;
+  padding: 15px;
+}
+
+@keyframes descriptEnter {
+  from {
+    opacity: 0;
+    transform: translateY(200px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}

@@ -1,0 +1,268 @@
+.mainContainer {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.35);
+  position: relative;
+}
+
+.iconsContainer img,
+.iconsContainer .profileIcon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.profileIcon {
+  border-radius: 50%;
+  position: relative;
+}
+
+.onlineSymbol {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  padding: 2px;
+  background-color: rgb(25, 200, 25);
+  border-radius: 50%;
+  right: -3px;
+  bottom: 0;
+}
+
+.iconsContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 500px;
+  padding: 10px;
+  opacity: 0;
+  animation-fill-mode: forwards;
+  animation-name: rightHeaderEnter;
+  animation-delay: 2s;
+  animation-duration: 1s;
+}
+
+.iconsContainer p {
+  font-size: 45px;
+  font-weight: lighter;
+  margin: 0px 0px 0px 40px;
+  letter-spacing: 1px;
+}
+
+.mainHeader {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px;
+}
+
+.gamesMedia {
+  display: flex;
+  justify-content: space-around;
+  width: 225px;
+  font-size: 24px;
+  opacity: 0;
+  animation-fill-mode: forwards;
+  animation-name: leftHeaderEnter;
+  animation-delay: 2s;
+  animation-duration: 1s;
+}
+
+.gamesMedia p {
+  color: rgb(197, 197, 197);
+}
+
+.sections {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 90%;
+  padding: 15px;
+  transition-duration: 0.15s;
+  transition-timing-function: cubic-bezier(0.42, 0, 1, 1);
+  position: relative;
+  /* animation-fill-mode: forwards; */
+  animation-name: sectionsEnter;
+  animation-duration: 2s;
+}
+
+.sections .sect {
+  margin: 15px;
+  width: 100px;
+  height: 100px;
+  border-radius: 20px;
+  position: relative;
+}
+
+.sections .activeSect {
+  border: 3px solid #fff;
+  transform: scale(1.4) translateY(10px);
+}
+
+.sections p {
+  position: absolute;
+  left: 110px;
+  bottom: 0px;
+  width: 300px;
+}
+
+.sections .sect img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+
+.batteryController {
+  position: fixed;
+  z-index: 3;
+  width: 120px;
+  height: 80px;
+  border-radius: 15px;
+  top: 30px;
+  right: 15px;
+  transform: translateX(300px);
+  animation-fill-mode: forwards;
+  animation-name: batteryEnterLeave;
+  animation-duration: 5s;
+  animation-delay: 2s;
+}
+
+@keyframes batteryEnterLeave {
+  from {
+    transform: translateX(300px);
+  }
+  50% {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(300px);
+  }
+}
+
+@keyframes sectionsEnter {
+  from {
+    transform: scale(0.15) translateX(-1000px);
+  }
+  to {
+    transform: scale(1) translateX(-136px);
+  }
+}
+
+@keyframes leftHeaderEnter {
+  from {
+    opacity: 0;
+    transform: translateY(-75px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes rightHeaderEnter {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.exploreDescription {
+  position: absolute;
+  bottom: 50px;
+  left: 100px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  opacity: 0;
+  animation-fill-mode: forwards;
+  animation-name: descriptEnter;
+  animation-delay: 0.2s;
+  animation-duration: 1.2s;
+}
+
+.exploreDescription p:nth-child(1) {
+  font-size: 18px;
+}
+
+.exploreDescription h1 {
+  margin: 25px 0px 20px 0px;
+  font-size: 40px;
+  font-weight: lighter;
+}
+
+.exploreDescription .tallLine {
+  line-height: 175%;
+  font-size: 24px;
+  color: rgb(194, 192, 192);
+}
+
+.exploreDescription .exploreImages {
+  margin: 40px 0px 0px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.exploreDescription .exploreImages img {
+  margin: 0px 25px 0px 0px;
+}
+
+.storeDescription {
+  position: absolute;
+  bottom: 50px;
+  left: 100px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  opacity: 0;
+  animation-fill-mode: forwards;
+  animation-name: descriptEnter;
+  animation-delay: 0.2s;
+  animation-duration: 1.2s;
+}
+
+.storeDescription h1 {
+  margin: 0px 0px 30px 0px;
+  font-size: 42px;
+  font-weight: lighter;
+}
+
+.storeDescription p {
+  font-size: 24px;
+}
+
+.storeDescription span {
+  margin: 45px 0px 10px 0px;
+  font-size: 18px;
+}
+
+.storeDescription .gameList {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.storeDescription .gameList img {
+  width: 225px;
+  height: 125px;
+  margin: 0px 25px 0px 0px;
+}
+
+@keyframes descriptEnter {
+  from {
+    opacity: 0;
+    transform: translateY(200px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}

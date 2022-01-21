@@ -1,0 +1,159 @@
+.loginContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.loginContainer .activeUser {
+  transform: scale(1.4);
+  border: 2px solid #fff;
+  box-shadow: inset 0 0 10px #fff, 0 0 10px #fff;
+  transition-duration: 0.3s;
+}
+
+.loginContainer .users .user .controllerImage {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: -55px;
+  opacity: 0;
+  animation-fill-mode: forwards;
+  animation-name: subTitle;
+  animation-duration: 1s;
+  animation-delay: 2s;
+}
+
+.loginContainer .users .user .optionsContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 100px;
+  bottom: -100px;
+}
+
+.loginContainer .users .user .optionsContainer p {
+  margin: 0px;
+  color: #fff;
+}
+
+.loginContainer .users .user .optionsContainer img {
+  width: 30px;
+  height: 30px;
+  margin: 0px 5px 0px 0px;
+  opacity: 0;
+  animation-fill-mode: forwards;
+  animation-name: subTitle;
+  animation-duration: 1s;
+  animation-delay: 2s;
+}
+
+@keyframes titleAppear {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes subTitle {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.loginContainer h1 {
+  animation-name: titleAppear;
+  animation-duration: 1s;
+}
+
+.loginContainer p {
+  opacity: 0;
+  animation-fill-mode: forwards;
+  color: rgb(209, 207, 207);
+  margin: 20px 0px 0px 0px;
+  font-size: 18px;
+  animation-name: subTitle;
+  animation-duration: 1s;
+  animation-delay: 2s;
+}
+
+.loginContainer .users {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 125px 0px 0px 0px;
+  transition-duration: 0.3s;
+  transition-timing-function: cubic-bezier(0.42, 0, 1, 1);
+}
+
+.loginContainer .users .user {
+  width: 150px;
+  height: 150px;
+  border: 1px solid rgb(189, 184, 184);
+  margin: 0px 40px 0px 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  position: relative;
+}
+
+.loginContainer .users .user h2 {
+  font-weight: lighter;
+  position: absolute;
+  bottom: -50px;
+  opacity: 0;
+  animation-fill-mode: forwards;
+  animation-name: subTitle;
+  animation-duration: 1s;
+  animation-delay: 2s;
+}
+
+.loginContainer .users .user h1 {
+  font-size: 80px;
+}
+
+.loginContainer .users .user img {
+  width: 100%;
+  border-radius: 100%;
+  border-radius: 50%;
+}
+
+.loginContainer .users .user:nth-child(1) {
+  animation-name: userSlideIn;
+  animation-duration: 0.5s;
+}
+
+.loginContainer .users .user:nth-child(2) {
+  animation-name: userSlideIn;
+  animation-duration: 1s;
+}
+
+.loginContainer .users .user:nth-child(3) {
+  animation-name: userSlideIn;
+  animation-duration: 1.5s;
+}
+
+.loginContainer .users .selectedUser {
+  transform: scale(1.3);
+}
+
+@keyframes userSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(100px) scale(0.2);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px) scale(1);
+  }
+}
