@@ -25,6 +25,12 @@ const StartScreen = ({ setCurScreen }) => {
   return (
     <div className={styles.startScreen}>
       <p>Press the PS button on your controller.</p>
+      <div className={styles.controlsCont}>
+        <p>Controls:</p>
+        <p>{`[a] or [<-] to go left.`}</p>
+        <p>{`[d] or [->] to go right.`}</p>
+        <p>{`[Enter] to select`}</p>
+      </div>
       <div
         onClick={() => {
           clickLogo();
