@@ -26,18 +26,23 @@ const Login = ({ setCurScreen, setUser }) => {
   const max = users[users.length - 1].id;
   const [active, setActive] = useState(2);
   const [transform, setTransform] = useState("0");
+  const [controllerOptions, setControllerOptions] = useState({
+    animationDelay: "2s",
+  });
 
   useEffect(() => {
     const listener = (e) => {
       if (e.code === "KeyA" || e.code === "ArrowLeft") {
         if (active > min) {
+          setControllerOptions({ animationDelay: "0.25s" });
           setActive(--active);
         }
       } else if (e.code === "KeyD" || e.code === "ArrowRight") {
         if (active < max) {
+          setControllerOptions({ animationDelay: "0.25s" });
           setActive(++active);
         }
-      } else if (e.code === "Enter") {
+      } else if (e.code === "Enter" && active > 1) {
         setCurScreen("main");
       }
     };
@@ -52,14 +57,16 @@ const Login = ({ setCurScreen, setUser }) => {
     let diff = active - 2;
     diff *= -1;
     console.log(diff);
-    let width = 150;
+    let width = 125;
     let padding = 3;
     let margin = 40;
     let user_width = width + 2 * padding + 2 * margin;
     setTransform(diff * user_width);
-    setUser(users[active]);
+    setUser(users[active - 1]);
   }, [active]);
 
+  //.controllerImage
+  //.optionsContainer img
   return (
     <div className={styles.loginContainer}>
       <h1>Welcome Back to PlayStation</h1>
@@ -85,6 +92,7 @@ const Login = ({ setCurScreen, setUser }) => {
                   <img
                     src={"/controller.png"}
                     className={styles.controllerImage}
+                    style={controllerOptions}
                   />
                 ) : (
                   ""
@@ -93,8 +101,8 @@ const Login = ({ setCurScreen, setUser }) => {
                 <h2>{u.name}</h2>
                 {active === u.id ? (
                   <div className={styles.optionsContainer}>
-                    <img src={"/options.png"} />
-                    <p>Options</p>
+                    <img src={"/options.png"} style={controllerOptions} />
+                    <p style={controllerOptions}>Options</p>
                   </div>
                 ) : (
                   ""

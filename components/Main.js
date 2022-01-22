@@ -75,9 +75,9 @@ const Main = ({ user, setBg }) => {
   useEffect(() => {
     let diff = active - 1;
     diff *= -1;
-    let width = 100;
+    let width = 80;
     let padding = 3;
-    let margin = 15;
+    let margin = 3;
     let user_width = width + 2 * padding + 2 * margin;
     setTransform(diff * user_width);
     console.log(sections[active - 1], sections[active - 1].bg);
@@ -88,6 +88,16 @@ const Main = ({ user, setBg }) => {
   return (
     <div className={styles.mainContainer}>
       <img className={styles.batteryController} src={"/battery.png"} />
+      <div className={styles.warningMessage}>
+        <p>
+          You do know you have to play PlayStation 5 on a bigger screen right..
+          ?
+        </p>
+        <p>
+          For a proper experience please visit this website on a larger size
+          screen.
+        </p>
+      </div>
       <div className={styles.mainHeader}>
         <div className={styles.gamesMedia}>
           <b>Games</b>

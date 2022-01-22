@@ -57,7 +57,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 25px;
+  padding: 1vw 1.6vw 1vw 1.6vw;
 }
 
 .gamesMedia {
@@ -81,7 +81,7 @@
   align-items: center;
   justify-content: flex-start;
   width: 90%;
-  padding: 15px;
+  padding: 1vh;
   transition-duration: 0.15s;
   transition-timing-function: cubic-bezier(0.42, 0, 1, 1);
   position: relative;
@@ -91,21 +91,22 @@
 }
 
 .sections .sect {
-  margin: 15px;
-  width: 100px;
-  height: 100px;
+  margin: 3px;
+  width: 80px;
+  height: 80px;
   border-radius: 20px;
   position: relative;
 }
 
 .sections .activeSect {
   border: 3px solid #fff;
-  transform: scale(1.4) translateY(10px);
+  margin: 25px;
+  transform: scale(1.25) translateY(10px);
 }
 
 .sections p {
   position: absolute;
-  left: 110px;
+  left: 90px;
   bottom: 0px;
   width: 300px;
 }
@@ -174,8 +175,8 @@
 
 .exploreDescription {
   position: absolute;
-  bottom: 50px;
-  left: 100px;
+  bottom: 5vh;
+  left: 3vw;
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -192,19 +193,19 @@
 }
 
 .exploreDescription h1 {
-  margin: 25px 0px 20px 0px;
+  margin: 2vh 0px 1.5vh 0px;
   font-size: 40px;
   font-weight: lighter;
 }
 
 .exploreDescription .tallLine {
-  line-height: 175%;
+  line-height: 150%;
   font-size: 24px;
   color: rgb(194, 192, 192);
 }
 
 .exploreDescription .exploreImages {
-  margin: 40px 0px 0px 0px;
+  margin: 2vh 0px 0px 0px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -216,8 +217,8 @@
 
 .storeDescription {
   position: absolute;
-  bottom: 50px;
-  left: 100px;
+  bottom: 5vh;
+  left: 3vw;
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -264,5 +265,80 @@
   to {
     opacity: 1;
     transform: translateY(0px);
+  }
+}
+
+.warningMessage {
+  position: fixed;
+  background-color: rgb(41, 41, 200);
+  padding: 15px 20px 15px 20px;
+  z-index: 2;
+  top: 15px;
+  border-radius: 25px;
+  width: 80%;
+  font-weight: bold;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.warningMessage p:nth-child(2) {
+  margin: 12px 0px 0px 0px;
+  color: rgb(216, 206, 206);
+}
+
+@media only screen and (max-height: 650px) {
+  .warningMessage {
+    display: flex;
+  }
+}
+@media only screen and (max-width: 530px) {
+  .warningMessage {
+    display: flex;
+  }
+}
+
+@media only screen and (max-height: 850px) {
+  .exploreDescription .exploreImages img {
+    width: 300px;
+    height: 180px;
+  }
+  .exploreDescription p:nth-child(1) {
+    font-size: 12px;
+  }
+
+  .exploreDescription h1 {
+    margin: 1vh 0px 1.2vh 0px;
+    font-size: 25px;
+  }
+
+  .exploreDescription .tallLine {
+    line-height: 125%;
+    font-size: 18px;
+  }
+  .storeDescription h1 {
+    margin: 1vh 0px 1.2vh 0px;
+    font-size: 32px;
+  }
+
+  .storeDescription p {
+    font-size: 22px;
+  }
+
+  .storeDescription span {
+    margin: 30px 0px 10px 0px;
+    font-size: 16px;
+  }
+
+  .storeDescription .gameList {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .storeDescription .gameList img {
+    width: 225px;
+    height: 125px;
+    margin: 0px 25px 0px 0px;
   }
 }

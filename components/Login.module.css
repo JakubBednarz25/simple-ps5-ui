@@ -3,13 +3,14 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  margin-top: -100px;
 }
 
 .loginContainer .activeUser {
+  transition-duration: 0.3s;
   transform: scale(1.4);
   border: 2px solid #fff;
   box-shadow: inset 0 0 10px #fff, 0 0 10px #fff;
-  transition-duration: 0.3s;
 }
 
 .loginContainer .users .user .controllerImage {
@@ -21,7 +22,7 @@
   animation-fill-mode: forwards;
   animation-name: subTitle;
   animation-duration: 1s;
-  animation-delay: 2s;
+  /* animation-delay: 2s; */
 }
 
 .loginContainer .users .user .optionsContainer {
@@ -46,7 +47,7 @@
   animation-fill-mode: forwards;
   animation-name: subTitle;
   animation-duration: 1s;
-  animation-delay: 2s;
+  /* animation-delay: 2s; */
 }
 
 @keyframes titleAppear {
@@ -95,8 +96,8 @@
 }
 
 .loginContainer .users .user {
-  width: 150px;
-  height: 150px;
+  width: 125px;
+  height: 125px;
   border: 1px solid rgb(189, 184, 184);
   margin: 0px 40px 0px 40px;
   border-radius: 50%;
@@ -119,7 +120,10 @@
 }
 
 .loginContainer .users .user h1 {
-  font-size: 80px;
+  font-size: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .loginContainer .users .user img {
